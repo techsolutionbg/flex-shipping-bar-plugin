@@ -1,0 +1,39 @@
+{
+  "id": "flex/shipping-bar",
+  "name": "Лента за безплатна доставка",
+  "version": "0.1.0",
+  "description": "Горна лента с прогрес към безплатна доставка. Изисква активен Flex Commerce.",
+  "minimum_platform_version": "0.1.56",
+  "entrypoint": "Flex\\ShippingBar\\ShippingBarPlugin",
+  "autoload": {
+    "Flex\\ShippingBar\\": "src/"
+  },
+  "permissions": [
+    "admin.ui",
+    "routes.admin",
+    "routes.public",
+    "frontend.assets"
+  ],
+  "frontend": {
+    "scripts": [
+      "assets/admin.js",
+      "assets/bar.js"
+    ],
+    "styles": [
+      "assets/bar.css"
+    ],
+    "public": {
+      "scripts": [
+        "assets/bar.js"
+      ],
+      "styles": [
+        "assets/bar.css"
+      ]
+    }
+  },
+  "metadata": {
+    "status": "stable",
+    "storage": "database",
+    "requires": ["flex/commerce"]
+  }
+}
