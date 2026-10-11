@@ -2,7 +2,7 @@
 
 A top bar for Flex Commerce that shows how much is left until free shipping and sets shipping to zero once the cart subtotal reaches the threshold.
 
-Version: **0.1.0** · ID: `flex/shipping-bar` · Minimum Flex CMS version: **0.1.56**.
+Version: **0.2.0** · ID: `flex/shipping-bar` · Minimum Flex CMS version: **0.1.62**.
 
 GitHub repository: `techsolutionbg/flex-shipping-bar-plugin`.
 

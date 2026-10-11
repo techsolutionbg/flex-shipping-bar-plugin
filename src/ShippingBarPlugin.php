@@ -46,6 +46,8 @@ final class ShippingBarPlugin implements PluginInterface, BootablePluginInterfac
         }
 
         $context->routes?->get('/config', PublicController::class, 'config');
+        // The bar loads only while it is switched on; the setting is read only when a public page is rendered.
+        ($context->assets ?? null)?->enqueueWhen('bar', static fn(): bool => (new ShippingBarSettings())->publicConfig()['enabled'] === true);
         $context->api->addFilter('commerce.checkout.quote', static function (mixed $quote, array $context = []): mixed {
             return (new FreeShippingQuote())->apply($quote);
         }, 100);
